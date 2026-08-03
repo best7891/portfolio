@@ -17,7 +17,7 @@
 
 
 
-  ### 4. Prototype Website Full development(Html.css.js) และ Api
+  ### 4. mini Prototype Website Full development(Html.css.js) และ Api
 * **รายละเอียด:** เว็บไซต์ต้นแบบ พัฒนาด้วย  (Html.css.js) และบางส่วนใช่ Api
 * 📂 **Source Code:** [GitHub Folder](./website%20v0.1)
  * 📂 **Source Code:** [GitHub Folder](./website%20v0.2)
