@@ -1,6 +1,6 @@
 # portfolio
 
-### 1. Comotop Shop (Community OTOP Shop)
+### 1. mini full Stack Comotop Shop (Community OTOP Shop)
 * **รายละเอียด:** แอปพลิเคชันมือถือสำหรับชุมชน พัฒนาด้วย Flutter/Dart
 * 📂 **Source Code:** [GitHub Folder](./commu_otopshop)
 * 🎬 **Demo Video:** [คลิปวิดีโอสาธิตการใช้งาน](https://youtu.be/aq4XdqOtck4)
