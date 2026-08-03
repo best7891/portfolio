@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Job Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h2 class="mb-4">APPLICATION FOR EMPLOYMENT</h2>
+        <h2>ใบสมัครงาน</h2> 
+    </div><br>
+        <form>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">ชื่อ</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="กรอกชื่อ">
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">นามสกุล</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="กรอกนามสกุล">
+                </div>
+            </div>
+        <h6 class="mt-4">Name</h6>    
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label for="position" class="form-label">ตำแหน่งที่ต้องการ</label>
+                    <input type="text" class="form-control" id="position" placeholder="กรอกตำแหน่งที่ต้องการ">
+                </div>
+                <div class="col-md-6">
+                    <label for="salary" class="form-label">เงินเดือนที่ต้องการ (บาท/เดือน)</label>
+                    <input type="number" class="form-control" id="salary" placeholder="กรอกเงินเดือนที่ต้องการ">
+                </div>
+            </div><br>
+        <h4 class="mt-4">Personal information (ประวัติส่วนตัว)</h4>
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label for="address" class="form-label">ที่อยู่ปัจจุบัน</label>
+                    <input type="text" class="form-control" id="address" placeholder="กรอกที่อยู่ปัจจุบัน">
+                </div>
+                <div class="col-md-3">
+                    <label for="phone" class="form-label">โทรศัพท์</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="กรอกเบอร์โทรศัพท์">
+                </div>
+                <div class="col-md-3">
+                    <label for="mobile" class="form-label">มือถือ</label>
+                    <input type="tel" class="form-control" id="mobile" placeholder="กรอกเบอร์มือถือ">
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label for="email" class="form-label">อีเมล</label>
+                    <input type="email" class="form-control" id="email" placeholder="กรอกอีเมล">
+                </div>
+                <div class="col-md-3">
+                    <label for="birthdate" class="form-label">วัน เดือน ปีเกิด</label>
+                    <input type="date" class="form-control" id="birthdate">
+                </div>
+                <div class="col-md-3">
+                    <label for="age" class="form-label">อายุ</label>
+                    <input type="number" class="form-control" id="age" placeholder="กรอกอายุ">
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                    <label for="nationality" class="form-label">เชื้อชาติ</label>
+                    <input type="text" class="form-control" id="nationality" placeholder="กรอกเชื้อชาติ">
+                </div>
+                <div class="col-md-4">
+                    <label for="citizenship" class="form-label">สัญชาติ</label>
+                    <input type="text" class="form-control" id="citizenship" placeholder="กรอกสัญชาติ">
+                </div>
+                <div class="col-md-4">
+                    <label for="religion" class="form-label">ศาสนา</label>
+                    <input type="text" class="form-control" id="religion" placeholder="กรอกศาสนา">
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label for="idNumber" class="form-label">บัตรประชาชนเลขที่</label>
+                    <input type="text" class="form-control" id="idNumber" placeholder="กรอกเลขที่บัตรประชาชน">
+                </div>
+                <div class="col-md-6">
+                    <label for="idExpiry" class="form-label">บัตรหมดอายุ</label>
+                    <input type="date" class="form-control" id="idExpiry">
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label for="height" class="form-label">ส่วนสูง (ซม.)</label>
+                    <input type="number" class="form-control" id="height" placeholder="กรอกส่วนสูง">
+                </div>
+                <div class="col-md-6">
+                    <label for="weight" class="form-label">น้ำหนัก (กก.)</label>
+                    <input type="number" class="form-control" id="weight" placeholder="กรอกน้ำหนัก">
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-12">
+                    <label class="form-label d-block">สถานภาพ</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="single" value="single">
+                        <label class="form-check-label" for="single">โสด</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="married" value="married">
+                        <label class="form-check-label" for="married">แต่งงาน</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="widowed" value="widowed">
+                        <label class="form-check-label" for="widowed">หม้าย</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="separated" value="separated">
+                        <label class="form-check-label" for="separated">แยกกัน</label>
+                    </div>
+                </div>
+            </div><br>
+    <h4 class="mt-4">Education (การศึกษา)</h4>
+        <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ระดับการศึกษา (Educational Level)</th>
+                        <th>สถาบันการศึกษา (Institution)</th>
+                        <th>สาขาวิชา (Major)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>มัธยมศึกษาตอนปลาย (High school)</td>
+                        <td><input type="text" class="form-control" placeholder="กรอกชื่อสถาบัน"></td>
+                        <td><input type="text" class="form-control" placeholder="กรอกสาขาวิชา"></td>
+                    </tr>
+                    <tr>
+                        <td>ปวช. (Vocational)</td>
+                        <td><input type="text" class="form-control" placeholder="กรอกชื่อสถาบัน"></td>
+                        <td><input type="text" class="form-control" placeholder="กรอกสาขาวิชา"></td>
+                    </tr>
+                    <tr>
+                        <td>ปวท. / ปวส. (Diploma)</td>
+                        <td><input type="text" class="form-control" placeholder="กรอกชื่อสถาบัน"></td>
+                        <td><input type="text" class="form-control" placeholder="กรอกสาขาวิชา"></td>
+                    </tr>
+                    <tr>
+                        <td>ปริญญาตรี (Bachelor degree)</td>
+                        <td><input type="text" class="form-control" placeholder="กรอกชื่อสถาบัน"></td>
+                        <td><input type="text" class="form-control" placeholder="กรอกสาขาวิชา"></td>
+                    </tr>
+                    <tr>
+                        <td>สูงกว่าปริญญาตรี (Post-Graduate)</td>
+                        <td><input type="text" class="form-control" placeholder="กรอกชื่อสถาบัน"></td>
+                        <td><input type="text" class="form-control" placeholder="กรอกสาขาวิชา"></td>
+                    </tr>
+                </tbody>
+        </table><br>
+    <h4 class="mt-4">Language Ability (ภาษา)</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ภาษา (Language)</th>
+            <th>พูด (Speaking)</th>
+            <th>เขียน (Writing)</th>
+            <th>อ่าน (Reading)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ภาษาไทย (Thai)</td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiSpeakingGood" value="good">
+                    <label class="form-check-label" for="thaiSpeakingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiSpeakingFair" value="fair">
+                    <label class="form-check-label" for="thaiSpeakingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiSpeakingPoor" value="poor">
+                    <label class="form-check-label" for="thaiSpeakingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiWritingGood" value="good">
+                    <label class="form-check-label" for="thaiWritingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiWritingFair" value="fair">
+                    <label class="form-check-label" for="thaiWritingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiWritingPoor" value="poor">
+                    <label class="form-check-label" for="thaiWritingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiReadingGood" value="good">
+                    <label class="form-check-label" for="thaiReadingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiReadingFair" value="fair">
+                    <label class="form-check-label" for="thaiReadingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="thaiReadingPoor" value="poor">
+                    <label class="form-check-label" for="thaiReadingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>ภาษาอังกฤษ (English)</td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishSpeakingGood" value="good">
+                    <label class="form-check-label" for="englishSpeakingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishSpeakingFair" value="fair">
+                    <label class="form-check-label" for="englishSpeakingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishSpeakingPoor" value="poor">
+                    <label class="form-check-label" for="englishSpeakingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishWritingGood" value="good">
+                    <label class="form-check-label" for="englishWritingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishWritingFair" value="fair">
+                    <label class="form-check-label" for="englishWritingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishWritingPoor" value="poor">
+                    <label class="form-check-label" for="englishWritingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishReadingGood" value="good">
+                    <label class="form-check-label" for="englishReadingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishReadingFair" value="fair">
+                    <label class="form-check-label" for="englishReadingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="englishReadingPoor" value="poor">
+                    <label class="form-check-label" for="englishReadingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>ภาษาญี่ปุ่น (Japan)</td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseSpeakingGood" value="good">
+                    <label class="form-check-label" for="japaneseSpeakingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseSpeakingFair" value="fair">
+                    <label class="form-check-label" for="japaneseSpeakingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseSpeakingPoor" value="poor">
+                    <label class="form-check-label" for="japaneseSpeakingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseWritingGood" value="good">
+                    <label class="form-check-label" for="japaneseWritingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseWritingFair" value="fair">
+                    <label class="form-check-label" for="japaneseWritingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseWritingPoor" value="poor">
+                    <label class="form-check-label" for="japaneseWritingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseReadingGood" value="good">
+                    <label class="form-check-label" for="japaneseReadingGood">ดี (Good)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseReadingFair" value="fair">
+                    <label class="form-check-label" for="japaneseReadingFair">ปานกลาง (Fair)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="japaneseReadingPoor" value="poor">
+                    <label class="form-check-label" for="japaneseReadingPoor">พอใช้ (Poor)</label>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
