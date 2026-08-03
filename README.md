@@ -12,7 +12,7 @@
 
 
 ### 3. Prototype Website (PHP)
-* **รายละเอียด:** เว็บไซต์ต้นแบบ พัฒนาด้วย PHP และ SQL
+* **รายละเอียด:** เว็บไซต์ต้นแบบ พัฒนาด้วย PHP และ SQL/TSQL
 * 📂 **Source Code:** [GitHub Folder](./Prototype%20Website%20(PHP))
 
 
@@ -39,14 +39,14 @@
 
 
 ### 7. Displaying calculated data via the console
-* **รายละเอียด:**  เป็นก่ีแสดงการคํานวณผ่านconsole เบาร์เซอร์ อายุ สินค้าวันหมดอายุ ใช่ Html/js พัฒนา
+* **รายละเอียด:**  เป็นการแสดงการคํานวณผ่านconsole เบาร์เซอร์ อายุ สินค้าวันหมดอายุ ใช่ Html/js พัฒนา
 * 📂 **Source Code:** [GitHub Folder](./Displaying%20calculated%20data%20via%20the%20console/value%20con)
 
 
 ## 🛠️ Tech Stack & Skills
 * **Mobile & Frontend:** Dart (Flutter) HTML CSS  Java script
-* **Backend & Database:** PHP, SQL (TSQL) Supabase 
-* **Design & Tools:** Figma, Git, GitHub
+* **Backend & Database:** PHP SQL (TSQL) Supabase 
+* **Design & Tools:** Figma Git  GitHub
 * **Game Engine & Open Source:** Gotdot 2D/3D Game
 
 
