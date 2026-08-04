@@ -7,8 +7,8 @@
 
 * ### 2. UX/UI Figma
 * **รายละเอียด:** แบบแอป ผู้พิการทางการได้ยิน และ แอป รายงานพฤติกรรม พัฒนาด้วย Figma
-* 🎨 **UI/UX Design:** [ดูงานออกแบบใน Figma](https://www.figma.com/proto/K7r1tBo4M621eAqDCfFP9m/Untitled?node-id=0-1)
-* 🎨 **UI/UX Design:** [ดูงานออกแบบใน Figma](https://www.figma.com/proto/5wZj0UEytyTq5bG8nzJ0L8/Figma-basics?node-id=601-177&starting-point-node-id=601%3A455)
+* 🎨 **UI/UX Design:** [ แอปผู้พิการทางการได้ยิน Figma](https://www.figma.com/proto/K7r1tBo4M621eAqDCfFP9m/Untitled?node-id=0-1)
+* 🎨 **UI/UX Design:** [ แอป รายงานพฤติกรรม Figma](https://www.figma.com/proto/5wZj0UEytyTq5bG8nzJ0L8/Figma-basics?node-id=601-177&starting-point-node-id=601%3A455)
 
 
 ### 3. Prototype Website (PHP)
