@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกกิจกรรมประะจําวัน</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body class="bg-slate-100 min-h-screen py-10 px-4">
+    <div id="app" class="max-w-md mx-auto bg-indigo-rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+        <div class="bg-pink-600 p-5 text-white">
+            <h1 class="text-2xl font-bold">บันทึกกิจกรรมประะจําวัน</h1>
+            <p class="text-white-200 text-sm mt-1">จัดการรายการสิ่งที่ต้องทำ</p>
+        </div>
+
+        <div class="p-6">
+            <form @submit.prevent="addTodo" class="flex gap-2 mb-6">
+                <input 
+                    type="text" 
+                    v-model="newTitle" 
+                    placeholder="เพิ่มรายการใหม่..." 
+                    class="flex-1 px-4 py-2 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
+                />
+                <button 
+                    type="submit" 
+                    class="bg-pink-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl font-medium transition cursor-pointer"
+                >
+                    เพิ่ม
+                </button>
+            </form>
+
+            <div v-if="todos.length === 0" class="text-center py-8 text-slate-400">
+                ยังไม่มีรายการ Todo ในระบบ
+            </div>
+
+            <ul v-else class="space-y-3">
+                <li 
+                    v-for="todo in todos" 
+                    :key="todo.id" 
+                    class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl transition"
+                >
+                    <div class="flex items-center gap-3 flex-1 min-w-0">
+                        <input 
+                            type="checkbox" 
+                            v-model="todo.completed" 
+                            @change="updateTodo(todo)"
+                            class="w-5 h-5 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500 cursor-pointer"
+                        />
+                        <span :class="{'line-through text-slate-400': todo.completed, 'text-slate-700': !todo.completed}" class="truncate">
+                            {{ todo.title }}
+                        </span>
+                    </div>
+                    
+                    <button 
+                        @click="deleteTodo(todo.id)" 
+                        class="text-red-500 hover:text-red-700 p-1 transition cursor-pointer"
+                        title="ลบ"
+                    >
+                        🗑️
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue
+
+        createApp({
+            setup() {
+                const todos = ref([])
+                const newTitle = ref('')
+                const API_URL = 'http://localhost:3333/api/todos'
+
+                
+                const fetchTodos = async () => {
+                    try {
+                        const response = await fetch(API_URL)
+                        const data = await response.json()
+                        todos.value = data.map(t => ({ 
+                            ...t, 
+                            completed: t.completed === 1 || t.completed === true || t.is_completed === 1 || t.is_completed === true 
+                        }))
+                    } catch (error) {
+                        console.error('Error fetching todos:', error)
+                    }
+                }
+
+                onMounted(() => {
+                    fetchTodos()
+                })
+
+                const addTodo = async () => {
+                    if (!newTitle.value.trim()) return
+                    try {
+                        const response = await fetch(API_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ title: newTitle.value })
+                        })
+                        if (response.ok) {
+                            newTitle.value = ''
+                            fetchTodos() // ดึงข้อมูลใหม่
+                        }
+                    } catch (error) {
+                        console.error('Error adding todo:', error)
+                    }
+                }
+
+                const updateTodo = async (todo) => {
+                    try {
+                        await fetch(`${API_URL}/${todo.id}`, {
+                            method: 'PUT',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ 
+                                title: todo.title, 
+                                is_completed: todo.completed ? 1 : 0 
+                            })
+                        })
+                    } catch (error) {
+                        console.error('Error updating todo:', error)
+                    }
+                }
+
+                const deleteTodo = async (id) => {
+                    try {
+                        const response = await fetch(`${API_URL}/${id}`, {
+                            method: 'DELETE'
+                        })
+                        if (response.ok) {
+                            fetchTodos() 
+                        }
+                    } catch (error) {
+                        console.error('Error deleting todo:', error)
+                    }
+                }
+
+                return {
+                    todos,
+                    newTitle,
+                    addTodo,
+                    updateTodo,
+                    deleteTodo
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
